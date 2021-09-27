@@ -15,7 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url,include
+from django.contrib import admin
+from django.contrib.auth import logout, views as auth_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    
+    url(r'^admin/', admin.site.urls),
+    url(r'',include('hoodie.urls')),
+    url(r'^accounts/',include('registration.backends.simple.urls')),
+    url('accounts/', include('django.contrib.auth.urls')),
+    url(r'^tinymce',include('tinymce.urls')),
 ]
+
