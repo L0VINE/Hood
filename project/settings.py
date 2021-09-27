@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-#import django_heroku
+import django_on_heroku
 import dj_database_url
 from decouple import config,Csv
 from django.conf import settings
@@ -171,4 +171,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 #Configure Django App for Heroku
-#django_heroku.settings(locals())
+django_on_heroku.settings(locals())
