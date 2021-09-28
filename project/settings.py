@@ -35,7 +35,7 @@ ACCOUNT_ACTIVATION_DAYS=7
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
-#MODE=config("MODE", default="dev")
+MODE=config("MODE", default="dev")
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = config('DEBUG',default=False,cast=bool)
